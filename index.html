@@ -48,17 +48,54 @@ rel="stylesheet">
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
         <li class="nav-item-has-submenu">
-          <a href="#leadership">Leadership</a>
+          <a href="#about">About Us ▾</a>
+          <ul class="submenu">
+            <li><a href="#story" onclick="showTopic('about-item','story','aboutDropdown')">Our Story</a></li>
+            <li><a href="#mission" onclick="showTopic('about-item','mission','aboutDropdown')">Mission</a></li>
+            <li><a href="#vision" onclick="showTopic('about-item','vision','aboutDropdown')">Vision</a></li>
+            <li><a href="#values" onclick="showTopic('about-item','values','aboutDropdown')">Core Values</a></li>
+            <li><a href="#location" onclick="showTopic('about-item','location','aboutDropdown')">Locations</a></li>
+          </ul>
+        </li>
+        <li class="nav-item-has-submenu">
+          <a href="#leadership">Leadership ▾</a>
           <ul class="submenu">
             <li><a href="#leadership">Church Leadership</a></li>
           </ul>
         </li>
-        <li><a href="#ministries">Ministries</a></li>
-        <li><a href="#sermons">Sermons & Media</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#giving">Giving</a></li>
+        <li class="nav-item-has-submenu">
+          <a href="#ministries">Ministries ▾</a>
+          <ul class="submenu">
+            <li><a href="#children" onclick="showTopic('ministry-item','children','ministryDropdown')">Children's</a></li>
+            <li><a href="#youth" onclick="showTopic('ministry-item','youth','ministryDropdown')">Youth</a></li>
+            <li><a href="#women" onclick="showTopic('ministry-item','women','ministryDropdown')">Women's</a></li>
+            <li><a href="#men" onclick="showTopic('ministry-item','men','ministryDropdown')">Men's</a></li>
+            <li><a href="#worship" onclick="showTopic('ministry-item','worship','ministryDropdown')">Worship & Choir</a></li>
+            <li><a href="#outreach" onclick="showTopic('ministry-item','outreach','ministryDropdown')">Outreach</a></li>
+            <li><a href="#media" onclick="showTopic('ministry-item','media','ministryDropdown')">Media & Tech</a></li>
+          </ul>
+        </li>
+        <li class="nav-item-has-submenu">
+          <a href="#sermons">Media ▾</a>
+          <ul class="submenu">
+            <li><a href="#sermons-featured" onclick="showTopic('sermons-item','sermons-featured','sermonsDropdown')">Featured Sermon</a></li>
+            <li><a href="#sermons-recent" onclick="showTopic('sermons-item','sermons-recent','sermonsDropdown')">Recent Sermons</a></li>
+            <li><a href="#sermons-podcasts" onclick="showTopic('sermons-item','sermons-podcasts','sermonsDropdown')">Podcasts</a></li>
+            <li><a href="#sermons-notes" onclick="showTopic('sermons-item','sermons-notes','sermonsDropdown')">Notes</a></li>
+            <li><a href="#sermons-testimonies" onclick="showTopic('sermons-item','sermons-testimonies','sermonsDropdown')">Testimonies</a></li>
+          </ul>
+        </li>
+        <li class="nav-item-has-submenu">
+          <a href="#events">Events ▾</a>
+          <ul class="submenu">
+            <li><a href="#events-featured" onclick="showTopic('events-item','events-featured','eventsDropdown')">Featured Event</a></li>
+            <li><a href="#events-upcoming" onclick="showTopic('events-item','events-upcoming','eventsDropdown')">Upcoming Events</a></li>
+            <li><a href="#events-calendar" onclick="showTopic('events-item','events-calendar','eventsDropdown')">Calendar</a></li>
+            <li><a href="#events-gallery" onclick="showTopic('events-item','events-gallery','eventsDropdown')">Gallery</a></li>
+          </ul>
+        </li>
+        <li><a href="#giving">Give</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -581,9 +618,10 @@ reserved.</p>
     // Welcome Modal Functions
     function getGreeting() {
       const hour = new Date().getHours();
-      if (hour < 12) return 'Good Morning!';
-      if (hour < 18) return 'Good Afternoon!';
-      return 'Good Evening!';
+      if (hour >= 5 && hour < 12) return 'Good morning!';
+      if (hour >= 12 && hour < 16) return 'Good afternoon!';
+      if (hour >= 16 && hour < 22) return 'Good evening!';
+      return 'Good night!';
     }
 
     function showWelcomeModal() {
