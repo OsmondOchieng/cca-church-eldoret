@@ -11,6 +11,142 @@
   border-radius: 10px;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 20px;
+}
+
+.modal-content {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 620px;
+  width: 100%;
+  padding: 24px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 1.6em;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background-color: #0000FF;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-btn:hover,
+.dropdown-btn:focus {
+  background-color: #0000cc;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  min-width: 220px;
+  z-index: 100;
+  padding: 10px 0;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 18px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f8f4ff;
+}
+
+.calendar-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.calendar-controls button {
+  background: #0000FF;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.calendar-controls button:hover {
+  background: #0000cc;
+}
+
+.calendar-day {
+  padding: 12px 8px;
+  min-height: 85px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.calendar-day span {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.calendar-event {
+  display: block;
+  margin-top: 8px;
+  background-color: #ffe4ec;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #8d034d;
+}
+
+.calendar-legend {
+  margin-top: 14px;
+  font-size: 0.92rem;
+  color: #555;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
