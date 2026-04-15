@@ -227,8 +227,7 @@ nav li .submenu {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
-nav li:hover .submenu,
-nav li:focus-within .submenu {
+nav li .submenu.show {
   display: block;
 }
 
