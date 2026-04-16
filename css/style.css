@@ -339,9 +339,18 @@ hr {
   height: 130px;
 }
 
+.circular-image.minji-image,
+.circular-image.secretary-image {
+  width: 140px;
+  height: 140px;
+}
+
 .circular-image.minji-image {
-  width: 130px;
-  height: 130px;
+  object-position: center 65%;
+}
+
+.circular-image.secretary-image {
+  object-position: center 70%;
 }
 
 /* Extra large card variant */
