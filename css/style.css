@@ -339,6 +339,11 @@ hr {
   height: 130px;
 }
 
+.circular-image.minji-image {
+  width: 130px;
+  height: 130px;
+}
+
 /* Extra large card variant */
 .card.card-xl {
   width: 350px;
