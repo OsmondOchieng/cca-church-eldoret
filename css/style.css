@@ -360,8 +360,14 @@ hr {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center;
   margin: 0 auto 15px;
 }
+
+.circular-image.secretary-image {
+  object-position: center 60%;
+}
+
 
 .card h4 {
   color: #0000FF; /* Blue */
